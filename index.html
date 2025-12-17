@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>New Styles Furniture Udyog — Ravindra Sharma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d10; /* Darker background */
+            color: #d1d5db; /* Lighter text for contrast */
+        }
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            object-fit: cover;
+        }
+        #home {
+            position: relative;
+            height: 100vh;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #1a202c; /* Darker modal background */
+            padding: 2.5rem;
+            border-radius: 1rem;
+            max-width: 90%;
+            width: 500px;
+            position: relative;
+            animation: slideIn 0.5s ease-out;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border: 1px solid #4a5568;
+        }
+        .close-btn {
+            color: #d1d5db;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover {
+            color: #d98a3c;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fade-in 1s ease-out forwards; }
+        .animate-delay-100 { animation-delay: 0.1s; }
+        .animate-delay-200 { animation-delay: 0.2s; }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- NAV -->
+    <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <a href="#home" class="flex items-center gap-2">
+                <img src="images/logo1.jpeg" alt="New Styles Furniture Udyog Logo" class="w-10 h-10 rounded-full shadow-lg">
+                <span class="text-xl md:text-2xl font-extrabold text-yellow-400">
+                    New Styles Furniture Udyog
+                </span>
+            </a>
+            <nav class="hidden md:flex space-x-6 text-gray-300 font-medium">
+                <a href="#home" class="hover:text-yellow-400 transition duration-300">Home</a>
+                <a href="#about" class="hover:text-yellow-400 transition duration-300">About</a>
+                <a href="#products" class="hover:text-yellow-400 transition duration-300">Products</a>
+                
+                <a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button id="cartBtn" class="relative text-gray-300 hover:text-yellow-400 transition duration-300">
+                    <i class="fas fa-shopping-cart text-2xl"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">0</span>
+                </button>
+                <button id="mobileBtn" class="md:hidden text-gray-300 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileNav" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+            <div class="flex flex-col px-6 py-4 space-y-4 text-center text-gray-300">
+                <a href="#home" class="hover:text-yellow-400 transition duration-300">Home</a>
+                <a href="#about" class="hover:text-yellow-400 transition duration-300">About</a>
+                <a href="#products" class="hover:text-yellow-400 transition duration-300">Products</a>
+               
+                <a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="relative overflow-hidden">
+
+        <!-- New video background for the home section -->
+         <img src="images/backgraound.jpg" type="images/mp4">
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
+            <div class="text-center max-w-4xl px-6">
+                <p class="text-sm tracking-widest text-yellow-300 mb-4 font-semibold animate-fade-in">WELCOME</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4 animate-fade-in animate-delay-100">
+                    Crafting <span class="text-yellow-400">Timeless Furniture</span> for Your Home
+                </h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in animate-delay-200">
+                    We combine traditional craftsmanship with modern design to create pieces that are not just furniture, but a part of your story.
+                </p>
+                <div class="mt-8 space-x-4">
+                    <a href="#products" class="inline-block bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">EXPLORE PRODUCTS</a>
+                    <a href="#contact" class="inline-block border border-white text-white font-semibold py-3 px-8 rounded-full transform hover:bg-white/10 hover:text-white transition duration-300">GET IN TOUCH</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+            <div class="md:col-span-2 bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700">
+                <h2 class="text-4xl font-extrabold mb-6 text-white">About Us</h2>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    Welcome to New Styles Furniture Udyog! I am Ravindra Sharma, a dedicated businessman with a passion for creating high-quality, functional, and aesthetically pleasing furniture. My journey began 6 years ago, and since then, my focus has been on mastering the art of furniture design and management.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-300">
+                    <p><strong>Profile:</strong> Furniture & Analytics</p>
+                    <p><strong>Experience:</strong> 6 Years</p>
+                    <p><strong>Education:</strong> Undergraduate</p>
+                    <p><strong>Address:</strong> Bihar, India</p>
+                    <p><strong>Languages:</strong> English, Hindi, Bhojpuri, Maithili</p>
+                </div>
+            </div>
+            <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700">
+                <h4 class="font-bold text-white mb-4">Core Skills</h4>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm"><span>Market Awareness</span><span>95%</span></div>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-yellow-400 h-2 rounded-full" style="width: 95%;"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm"><span>Sales & Marketing</span><span>85%</span></div>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-yellow-400 h-2 rounded-full" style="width: 85%;"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm"><span>Business & Ops Mgmt</span><span>90%</span></div>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-yellow-400 h-2 rounded-full" style="width: 90%;"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm"><span>Quality Control</span><span>85%</span></div>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-yellow-400 h-2 rounded-full" style="width: 85%;"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm"><span>Sustainability</span><span>80%</span></div>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-yellow-400 h-2 rounded-full" style="width: 80%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- PRODUCTS -->
+    <section id="products" class="bg-gray-800 py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center text-white mb-12">Our Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Furniture Products -->
+                <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300" data-id="1" data-name="Elegant Sofa" data-price="25000">
+                    <img src="images/elegant sofa.jpg" alt="Elegant Sofa" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold text-white mb-2">Elegant Sofa</h3>
+                    <p class="text-sm text-gray-400">A classic piece for your living room, combining comfort and style.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xl font-bold text-yellow-400">₹25,000</span>
+                        <button class="add-to-cart bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-full shadow-lg hover:scale-105 transition duration-300 text-sm">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300" data-id="2" data-name="Modern Dining Table" data-price="15000">
+                    <img src="images/Modern Dining Table.webp" alt="Modern Dining Table" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold text-white mb-2">Modern Dining Table</h3>
+                    <p class="text-sm text-gray-400">Perfect for family dinners and entertaining guests. Available in multiple finishes.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xl font-bold text-yellow-400">₹15,000</span>
+                        <button class="add-to-cart bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-full shadow-lg hover:scale-105 transition duration-300 text-sm">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300" data-id="3" data-name="Comfortable Bed" data-price="35000">
+                    <img src="images/Comfortable Bed.webp" alt="Comfortable Bed" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold text-white mb-2">Comfortable Bed</h3>
+                    <p class="text-sm text-gray-400">Sleep soundly on our beautifully crafted bed frame, designed for ultimate relaxation.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xl font-bold text-yellow-400">₹35,000</span>
+                        <button class="add-to-cart bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-full shadow-lg hover:scale-105 transition duration-300 text-sm">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300" data-id="4" data-name="Study Desk" data-price="8000">
+                    <img src="images/Study Desk.jpg" alt="Study Desk" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold text-white mb-2">Study Desk</h3>
+                    <p class="text-sm text-gray-400">A minimal and functional desk, perfect for your home office or study space.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xl font-bold text-yellow-400">₹8,000</span>
+                        <button class="add-to-cart bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-full shadow-lg hover:scale-105 transition duration-300 text-sm">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300" data-id="5" data-name="Bookshelf" data-price="12000">
+                    <img src="Bookshelf.jpg" alt="Bookshelf" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold text-white mb-2">Bookshelf</h3>
+                    <p class="text-sm text-gray-400">Display your favorite books and decor with this sturdy and stylish bookshelf.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xl font-bold text-yellow-400">₹12,000</span>
+                        <button class="add-to-cart bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-full shadow-lg hover:scale-105 transition duration-300 text-sm">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300" data-id="6" data-name="Accent Chair" data-price="7500">
+                    <img src="images/Accent Chair.jpg" alt="Accent Chair" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold text-white mb-2">Accent Chair</h3>
+                    <p class="text-sm text-gray-400">Add a pop of color and comfort to any room with our beautifully designed accent chair.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xl font-bold text-yellow-400">₹7,500</span>
+                        <button class="add-to-cart bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-full shadow-lg hover:scale-105 transition duration-300 text-sm">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Electronics Products -->
+                <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300" data-id="7" data-name="Washing Machine" data-price="18000">
+                    <img src="images/Washing Machine.jpg" alt="Washing Machine" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold text-white mb-2">Washing Machine</h3>
+                    <p class="text-sm text-gray-400">A fully automatic washing machine for hassle-free laundry.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xl font-bold text-yellow-400">₹18,000</span>
+                        <button class="add-to-cart bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-full shadow-lg hover:scale-105 transition duration-300 text-sm">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300" data-id="8" data-name="Refrigerator" data-price="22000">
+                    <img src="images/Refrigerator.avif" alt="Refrigerator" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold text-white mb-2">Refrigerator</h3>
+                    <p class="text-sm text-gray-400">Energy-efficient refrigerator with a sleek design and ample storage.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xl font-bold text-yellow-400">₹22,000</span>
+                        <button class="add-to-cart bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-full shadow-lg hover:scale-105 transition duration-300 text-sm">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300" data-id="9" data-name="Air Cooler" data-price="6500">
+                    <img src="images/Air Cooler.avif" alt="Air Cooler" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold text-white mb-2">Air Cooler</h3>
+                    <p class="text-sm text-gray-400">Stay cool and comfortable with this portable and powerful air cooler.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xl font-bold text-yellow-400">₹6,500</span>
+                        <button class="add-to-cart bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-full shadow-lg hover:scale-105 transition duration-300 text-sm">Add to Cart</button>
+                    </div>
+                </div>
+                 <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300" data-id="8" data-name="Refrigerator" data-price="22000">
+                    <img src="images/Refrigerator.avif" alt="Refrigerator" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold text-white mb-2">Refrigerator</h3>
+                    <p class="text-sm text-gray-400">Energy-efficient refrigerator with a sleek design and ample storage.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xl font-bold text-yellow-400">₹22,000</span>
+                        <button class="add-to-cart bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-full shadow-lg hover:scale-105 transition duration-300 text-sm">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300" data-id="9" data-name="Air Cooler" data-price="6500">
+                    <img src="images/Air Cooler.avif" alt="Air Cooler" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold text-white mb-2">Air Cooler</h3>
+                    <p class="text-sm text-gray-400">Stay cool and comfortable with this portable and powerful air cooler.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xl font-bold text-yellow-400">₹6,500</span>
+                        <button class="add-to-cart bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-full shadow-lg hover:scale-105 transition duration-300 text-sm">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    
+
+    <!-- COUNTERS -->
+    <section class="bg-gray-800 py-20 text-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 container mx-auto px-6">
+            <div class="p-6 bg-gray-900 rounded-lg shadow-xl border border-gray-700">
+                <div class="counter text-5xl font-extrabold text-yellow-400 counter-animation" data-target="100">0</div>
+                <p class="text-lg text-gray-400 mt-2">Products Designed</p>
+            </div>
+            <div class="p-6 bg-gray-900 rounded-lg shadow-xl border border-gray-700">
+                <div class="counter text-5xl font-extrabold text-yellow-400 counter-animation" data-target="100">0</div>
+                <p class="text-lg text-gray-400 mt-2">Projects Completed</p>
+            </div>
+            <div class="p-6 bg-gray-900 rounded-lg shadow-xl border border-gray-700">
+                <div class="counter text-5xl font-extrabold text-yellow-400 counter-animation" data-target="5000">0</div>
+                <p class="text-lg text-gray-400 mt-2">Happy Customers</p>
+            </div>
+            <div class="p-6 bg-gray-900 rounded-lg shadow-xl border border-gray-700">
+                <div class="counter text-5xl font-extrabold text-yellow-400 counter-animation" data-target="6">0</div>
+                <p class="text-lg text-gray-400 mt-2">Years of Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="container mx-auto px-6 py-20">
+        <h2 class="text-4xl font-extrabold text-center text-white mb-12">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 flex flex-col items-center text-center">
+                <img src="https://placehold.co/100x100/A3B18A/FFFFFF?text=A" alt="Customer Avatar" class="w-20 h-20 rounded-full mb-4 object-cover">
+                <div class="flex text-yellow-400 mb-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-300 text-lg italic mb-4">"The quality of the furniture is outstanding. It's clear that they put a lot of care into their craft. My new sofa is the centerpiece of my living room!"</p>
+                <span class="font-bold text-white">- ravi kumar</span>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 flex flex-col items-center text-center">
+                <img src="https://placehold.co/100x100/F4A261/FFFFFF?text=B" alt="Customer Avatar" class="w-20 h-20 rounded-full mb-4 object-cover">
+                <div class="flex text-yellow-400 mb-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text-gray-300 text-lg italic mb-4">"Absolutely love my new dining table. It was delivered on time and the installation was seamless. Highly recommend New Styles Furniture!"</p>
+                <span class="font-bold text-white">- shivam Sharma</span>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 flex flex-col items-center text-center">
+                <img src="https://placehold.co/100x100/457B9D/FFFFFF?text=C" alt="Customer Avatar" class="w-20 h-20 rounded-full mb-4 object-cover">
+                <div class="flex text-yellow-400 mb-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-300 text-lg italic mb-4">"The customer service was excellent. Ravindra helped me choose the perfect bookshelf for my space. It looks amazing and is very sturdy."</p>
+                <span class="font-bold text-white">- rahul Sharma</span>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="container mx-auto px-6 py-20">
+        <h2 class="text-4xl font-extrabold mb-10 text-center">Get in Touch</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700">
+                <h3 class="text-2xl font-bold text-white mb-4">Contact Details</h3>
+                <p class="text-gray-300 mb-2"><strong>Address:</strong> Bihar, India</p>
+                <p class="text-gray-300 mb-2"><strong>Phone:</strong> <a href="tel:9608731685" class="text-yellow-400 hover:underline">9608731685</a></p>
+                <p class="text-gray-300 mb-6"><strong>Email:</strong> <a href="mailto:Ravindra098@gmail.com" class="text-yellow-400 hover:underline">Ravindra098@gmail.com</a></p>
+                
+                <h4 class="font-bold text-white mb-3">Find me on:</h4>
+                <div class="flex space-x-5">
+                    <a href="https://www.instagram.com/ravindarsharma738/" target="_blank" class="text-pink-500 hover:scale-110 transition-transform"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://facebook.com/" target="_blank" class="text-blue-500 hover:scale-110 transition-transform"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="https://github.com/" target="_blank" class="text-gray-400 hover:scale-110 transition-transform"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.netlify.com/" target="_blank" class="hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-8 h-8 fill-teal-400"><path d="M128 0L256 128 128 256 0 128 128 0zM128 40l-88 88 88 88 88-88-88-88z"/></svg></a>
+                    <a href="https://www.youtube.com/yourchannel" target="_blank" class="text-red-600 hover:scale-110 transition-transform"><i class="fab fa-youtube fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-blue-400 hover:scale-110 transition-transform"><i class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700">
+                <h3 class="text-2xl font-bold text-white mb-6">Send a Message</h3>
+                <form>
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-400 font-medium mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-400 font-medium mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-400 font-medium mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-yellow-400 text-gray-900 font-bold py-3 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                        SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-gray-800 py-6 text-center text-gray-400">
+        <p>&copy; <span id="year"></span> New Styles Furniture Udyog. All rights reserved.</p>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 class="text-2xl font-bold text-white mb-4">Your Shopping Cart</h2>
+            <ul id="cart-items" class="space-y-4 mb-6">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <div class="border-t border-gray-700 pt-4 flex justify-between items-center mb-6">
+                <span class="text-lg font-bold text-white">Total:</span>
+                <span id="cart-total" class="text-2xl font-bold text-yellow-400">₹0</span>
+            </div>
+            
+            <form id="checkoutForm">
+                <div class="mb-4">
+                    <label class="block text-gray-400 font-medium mb-2">Payment Method</label>
+                    <div class="flex items-center space-x-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio text-yellow-400 h-5 w-5" name="paymentMethod" value="online" checked>
+                            <span class="ml-2 text-white">Online (UPI/Netbanking)</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio text-yellow-400 h-5 w-5" name="paymentMethod" value="card">
+                            <span class="ml-2 text-white">Card Payment</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio text-yellow-400 h-5 w-5" name="paymentMethod" value="cash">
+                            <span class="ml-2 text-white">Cash on Delivery</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio text-yellow-400 h-5 w-5" name="paymentMethod" value="installment">
+                            <span class="ml-2 text-white">Installment</span>
+                        </label>
+                    </div>
+                </div>
+                <div id="message-box" class="hidden p-4 rounded-lg text-center mb-4"></div>
+                <button type="submit" class="w-full bg-yellow-400 text-gray-900 font-bold py-3 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                        Proceed to Checkout
+                </button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const mobileBtn = document.getElementById('mobileBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const cartBtn = document.getElementById('cartBtn');
+        const cartModal = document.getElementById('cartModal');
+        const closeBtn = document.querySelector('.close-btn');
+        const productsSection = document.getElementById('products');
+        const cartItemsList = document.getElementById('cart-items');
+        const cartTotalSpan = document.getElementById('cart-total');
+        const cartCountSpan = document.getElementById('cart-count');
+        const yearSpan = document.getElementById('year');
+        const counters = document.querySelectorAll('.counter-animation');
+        const checkoutForm = document.getElementById('checkoutForm');
+        const messageBox = document.getElementById('message-box');
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        function updateCartDisplay() {
+            cartItemsList.innerHTML = '';
+            let total = 0;
+            let count = 0;
+
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'flex items-center justify-between bg-gray-800 p-4 rounded-lg';
+                li.innerHTML = `
+                    <div class="flex-1">
+                        <span class="font-bold text-white">${item.name}</span>
+                        <span class="block text-sm text-gray-400">₹${item.price} x ${item.quantity}</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button class="update-quantity bg-gray-700 text-white px-2 rounded-full hover:bg-gray-600 transition" data-id="${item.id}" data-action="decrease">-</button>
+                        <span class="text-white">${item.quantity}</span>
+                        <button class="update-quantity bg-gray-700 text-white px-2 rounded-full hover:bg-gray-600 transition" data-id="${item.id}" data-action="increase">+</button>
+                        <button class="remove-from-cart text-red-500 hover:text-red-400 transition ml-4" data-id="${item.id}"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                `;
+                cartItemsList.appendChild(li);
+                total += item.price * item.quantity;
+                count += item.quantity;
+            });
+            
+            cartTotalSpan.textContent = `₹${total}`;
+            cartCountSpan.textContent = count;
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function showMessage(type, message) {
+            messageBox.textContent = message;
+            messageBox.className = `p-4 rounded-lg text-center mb-4 ${type === 'success' ? 'bg-green-600' : 'bg-red-600'}`;
+            messageBox.classList.remove('hidden');
+            setTimeout(() => {
+                messageBox.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Event Listeners
+        mobileBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+        });
+
+        cartBtn.addEventListener('click', () => {
+            cartModal.style.display = 'flex';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            cartModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === cartModal) {
+                cartModal.style.display = 'none';
+            }
+        });
+
+        productsSection.addEventListener('click', (event) => {
+            if (event.target.classList.contains('add-to-cart')) {
+                const productEl = event.target.closest('[data-id]');
+                const id = productEl.dataset.id;
+                const name = productEl.dataset.name;
+                const price = parseFloat(productEl.dataset.price);
+
+                const existingItem = cart.find(item => item.id === id);
+                if (existingItem) {
+                    existingItem.quantity++;
+                } else {
+                    cart.push({ id, name, price, quantity: 1 });
+                }
+                updateCartDisplay();
+                showMessage('success', `${name} added to cart!`);
+            }
+        });
+
+        cartItemsList.addEventListener('click', (event) => {
+            const button = event.target.closest('button');
+            if (!button) return;
+
+            const id = button.dataset.id;
+            const itemIndex = cart.findIndex(item => item.id === id);
+
+            if (button.classList.contains('remove-from-cart')) {
+                cart.splice(itemIndex, 1);
+                showMessage('success', 'Item removed from cart.');
+            } else if (button.classList.contains('update-quantity')) {
+                const action = button.dataset.action;
+                if (action === 'increase') {
+                    cart[itemIndex].quantity++;
+                } else if (action === 'decrease' && cart[itemIndex].quantity > 1) {
+                    cart[itemIndex].quantity--;
+                } else if (action === 'decrease' && cart[itemIndex].quantity === 1) {
+                    cart.splice(itemIndex, 1);
+                }
+            }
+            updateCartDisplay();
+        });
+
+        checkoutForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const formData = new FormData(checkoutForm);
+            const paymentMethod = formData.get('paymentMethod');
+            if (cart.length === 0) {
+                showMessage('error', 'Your cart is empty.');
+                return;
+            }
+            const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            showMessage('success', `Order placed! Total: ₹${total} via ${paymentMethod}.`);
+            cart = [];
+            updateCartDisplay();
+        });
+
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function runCounters() {
+            counters.forEach(counter => {
+                if (isElementInViewport(counter)) {
+                    const target = parseInt(counter.dataset.target);
+                    let current = 0;
+                    const increment = Math.ceil(target / 100);
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            counter.textContent = target;
+                            clearInterval(timer);
+                        } else {
+                            counter.textContent = current;
+                        }
+                    }, 20);
+                }
+            });
+        }
+
+        // Initialize display and events
+        document.addEventListener('DOMContentLoaded', () => {
+            yearSpan.textContent = new Date().getFullYear();
+            updateCartDisplay();
+            
+            // Initial check for counters on page load
+            runCounters();
+        });
+
+        // Run counters when scrolling
+        window.addEventListener('scroll', runCounters);
+        
+    </script>
+</body>
+</html>
